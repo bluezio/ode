@@ -68,6 +68,7 @@ class SchedulerThread implements Runnable {
 
         _done = false;
         _thread = new Thread(this, "OdeScheduler");
+        _thread.setDaemon(true);
         _thread.start();
     }
 
